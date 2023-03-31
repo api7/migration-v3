@@ -1,0 +1,39 @@
+This tool automates the migratation of Apache APISIX configuration file from v2 to v3
+
+== Usage
+
+. Install a Python virtual environment:
++
+[source,bash]
+----
+python3 -m venv .venv
+----
++
+. Activate the virtual environment:
++
+[source,bash]
+----
+. .venv/bin/activate
+----
++
+. Install PyYAML:
++
+[source,bash]
+----
+pip install pyyaml
+----
++
+. Put the configuration file `config.yaml` in the same folder as the script
+. Run the script
++
+[source,bash]
+----
+python migrate.py
+----
+
+The script displays the result on the console.
+
+== Limitations
+
+* Loses comments
+* Loses order
